@@ -1,0 +1,54 @@
+
+.background-container {
+  position: relative;
+  background-image: url('../../public/sunset-7624720.jpg'); /* Reemplaza con la ruta a tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff; /* Color del texto en blanco para mejorar el contraste */
+};
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay negro semitransparente */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* Asegura que el contenido esté por encima del overlay */
+}
+
+.background-container {
+  padding: 16px;
+}
+
+.card-media {
+  width: 100%;
+  height: 200px; /* Ajusta la altura según sea necesario */
+  object-fit: cover; /* Asegura que la imagen no se distorsione */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+  text-align: center; /* Centra el texto dentro del Card */
+  border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+.card-content {
+  flex: 1; /* Permite que el contenido ocupe el espacio disponible */
+}
+
+@media (max-width: 600px) {
+  .card-media {
+    height: 150px; /* Ajusta la altura en pantallas pequeñas */
+  }
+}
